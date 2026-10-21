@@ -45,10 +45,10 @@
 
       <div class="result-body">
         <div class="avatar-row">
-          <span class="avatar" id="avatar">SA</span>
+          <span class="avatar" id="avatar">FR</span>
           <div>
-            <p class="avatar-row__name" id="nama-value">Syahid Amanullah</p>
-            <p class="avatar-row__meta" id="meta-value">NIM 124140174 &middot; Teknik Informatika</p>
+            <p class="avatar-row__name" id="nama-value">Farid Rizky Fauzan</p>
+            <p class="avatar-row__meta" id="meta-value">NIM 124140210 &middot; Teknik Informatika</p>
           </div>
         </div>
 
@@ -58,15 +58,15 @@
             <tbody>
               <tr>
                 <th scope="row">Nama Lengkap</th>
-                <td id="t-nama">Syahid Amanullah</td>
+                <td id="t-nama">Farid Rizky Fauzan</td>
               </tr>
               <tr>
                 <th scope="row">NIM</th>
-                <td id="t-nim">124140174</td>
+                <td id="t-nim">124140210</td>
               </tr>
               <tr>
                 <th scope="row">Email</th>
-                <td id="t-email">syahid.amanullah@student.itera.ac.id</td>
+                <td id="t-email">farid.rizkyfauzan@student.itera.ac.id</td>
               </tr>
               <tr>
                 <th scope="row">Nomor WhatsApp</th>
@@ -123,9 +123,9 @@
 
   <script>
     const dummy = {
-      nama: "Syahid Amanullah",
-      nim: "124140174",
-      email: "syahid.amanullah@student.itera.ac.id",
+      nama: "Farid Rizky Fauzan",
+      nim: "124140210",
+      email: "farid.rizkyfauzan@student.itera.ac.id",
       telepon: "0812-3456-7890",
       prodi: "Teknik Informatika",
       angkatan: "2024",
@@ -155,7 +155,7 @@
     document.getElementById("nama-value").textContent = data.nama;
     document.getElementById("meta-value").textContent =
       "NIM " + data.nim + " \u00b7 " + data.prodi;
-    document.getElementById("avatar").textContent = initials || "SA";
+    document.getElementById("avatar").textContent = initials || "FR";
 
     const badge = document.getElementById("source-badge");
     if (hasQuery) {

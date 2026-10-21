@@ -37,7 +37,7 @@ task_3/
 | `index.html` | Formulir pendaftaran dengan `method="get"` dan `action="detail.html"` |
 | `detail.html` | Menampilkan data pendaftar dari query string (fallback data dummy) |
 
-Data dummy yang dipakai: **Syahid Amanullah** &middot; NIM **124140174** &middot;
+Data dummy yang dipakai: **Farid Rizky Fauzan** &middot; NIM **124140210** &middot;
 Angkatan **2024**.
 
 ## Pemenuhan Kriteria
