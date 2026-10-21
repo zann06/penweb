@@ -59,3 +59,39 @@ Kedua halaman telah divalidasi menggunakan **[W3C Nu Html Checker](https://valid
 ---
 
 <p align="center">Dibuat untuk memenuhi Tugas 2 — Pengembangan Aplikasi Web, Teknik Informatika ITERA</p>
+
+---
+
+# Tugas 3 — Pengembangan Aplikasi Web
+
+### Formulir Pendaftaran & Halaman Detail (Query String)
+
+Halaman web dua layar bertema **elegant modern** dengan form `method="get"`
+yang meneruskan data pendaftar ke halaman detail melalui query string.
+
+| | |
+|---|---|
+| **Nama** | Farid Rizky Fauzan |
+| **NIM** | 124140210 |
+| **Kelas** | RA |
+| **Folder** | [`task_3/`](task_3) |
+
+**Halaman:**
+
+- [`task_3/index.html`](task_3/index.html) — formulir pendaftaran (`method="get"`).
+- [`task_3/detail.html`](task_3/detail.html) — ringkasan pendaftar dari query string
+  (menampilkan data dummy jika dibuka tanpa parameter).
+
+**Pemenuhan kriteria:**
+
+| Kriteria | Implementasi |
+|---|---|
+| Dua halaman | Formulir + halaman detail |
+| Form method GET | `action="detail.html" method="get"` |
+| Data via query string | `nama`, `nim`, `email`, `telepon`, `prodi`, `angkatan`, `gender`, `alamat` |
+| Halaman detail dummy | Data contoh tampil saat tidak ada query string |
+| Tidak menangkap data | Tanpa backend, cookie, atau penyimpanan |
+| Minimal 3 selector CSS | 40+ selector (class, element, pseudo-class, media query) |
+| Layout, box, tabel, form | CSS Grid, card, tabel data, styling form |
+
+Dokumentasi lengkap: [`task_3/README.md`](task_3/README.md).

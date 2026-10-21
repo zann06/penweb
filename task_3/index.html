@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Formulir pendaftaran anggota baru Program Studi Teknik Informatika ITERA.">
+  <title>Pendaftaran Anggota — Informatika ITERA</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <div class="glow glow--one" aria-hidden="true"></div>
+  <div class="glow glow--two" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <span class="brand__mark">IT</span>
+        <span class="brand__text">
+          <strong>Informatika</strong>
+          <small>Institut Teknologi Sumatera</small>
+        </span>
+      </a>
+      <nav class="nav" aria-label="Navigasi utama">
+        <a class="nav__link is-active" href="index.html">Pendaftaran</a>
+        <a class="nav__link" href="detail.html">Detail</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <p class="eyebrow">Formulir Resmi &middot; 2026</p>
+      <h1 class="display">Pendaftaran <em>Anggota Baru</em></h1>
+      <p class="lede">
+        Lengkapi data diri Anda di bawah ini. Seluruh informasi akan
+        diteruskan ke halaman detail melalui <span class="mono">query string</span>.
+      </p>
+    </section>
+
+    <div class="layout">
+      <aside class="info-panel" aria-label="Informasi pendaftaran">
+        <h2 class="info-panel__title">Sebelum Mendaftar</h2>
+        <ol class="steps">
+          <li class="step">
+            <span class="step__num">01</span>
+            <div>
+              <h3>Isi data diri</h3>
+              <p>Pastikan nama dan NIM sesuai dengan data akademik.</p>
+            </div>
+          </li>
+          <li class="step">
+            <span class="step__num">02</span>
+            <div>
+              <h3>Pilih program studi</h3>
+              <p>Minat ditempatkan pada divisi yang relevan.</p>
+            </div>
+          </li>
+          <li class="step">
+            <span class="step__num">03</span>
+            <div>
+              <h3>Tinjau ringkasan</h3>
+              <p>Data akan tampil pada halaman detail setelah dikirim.</p>
+            </div>
+          </li>
+        </ol>
+        <div class="note">
+          <span class="note__dot" aria-hidden="true"></span>
+          <p>Data tidak disimpan di server. Halaman ini murni menggunakan
+          <strong>method GET</strong>, sehingga isian tampil pada URL.</p>
+        </div>
+      </aside>
+
+      <section class="card" aria-labelledby="form-title">
+        <div class="card__head">
+          <h2 id="form-title">Data Pendaftar</h2>
+          <span class="badge">Wajib diisi</span>
+        </div>
+
+        <form class="form" action="detail.html" method="get">
+          <div class="form-grid">
+            <div class="field field--full">
+              <label for="nama">Nama Lengkap</label>
+              <input type="text" id="nama" name="nama" placeholder="Contoh: Aulia Rahma" required minlength="3">
+            </div>
+
+            <div class="field">
+              <label for="nim">NIM</label>
+              <input type="text" id="nim" name="nim" placeholder="124140210" required
+                     inputmode="numeric" pattern="[0-9]{9}" title="9 digit angka">
+            </div>
+
+            <div class="field">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="nama@student.itera.ac.id" required>
+            </div>
+
+            <div class="field">
+              <label for="telepon">Nomor WhatsApp</label>
+              <input type="tel" id="telepon" name="telepon" placeholder="08xxxxxxxxxx" required
+                     pattern="[0-9+\s-]{10,15}" title="10–15 digit angka">
+            </div>
+
+            <div class="field">
+              <label for="angkatan">Angkatan</label>
+              <select id="angkatan" name="angkatan" required>
+                <option value="" disabled selected>Pilih angkatan</option>
+                <option value="2022">2022</option>
+                <option value="2023">2023</option>
+                <option value="2024">2024</option>
+                <option value="2025">2025</option>
+                <option value="2026">2026</option>
+              </select>
+            </div>
+
+            <div class="field field--full">
+              <label for="prodi">Program Studi</label>
+              <select id="prodi" name="prodi" required>
+                <option value="" disabled selected>Pilih program studi</option>
+                <option value="Teknik Informatika">Teknik Informatika</option>
+                <option value="Sistem Informasi">Sistem Informasi</option>
+                <option value="Teknik Elektro">Teknik Elektro</option>
+                <option value="Teknik Biomedis">Teknik Biomedis</option>
+              </select>
+            </div>
+
+            <fieldset class="field field--full">
+              <legend>Jenis Kelamin</legend>
+              <div class="segmented">
+                <label class="segmented__item">
+                  <input type="radio" name="gender" value="Laki-laki" required>
+                  <span>Laki-laki</span>
+                </label>
+                <label class="segmented__item">
+                  <input type="radio" name="gender" value="Perempuan">
+                  <span>Perempuan</span>
+                </label>
+              </div>
+            </fieldset>
+
+            <div class="field field--full">
+              <label for="alamat">Alamat Domisili</label>
+              <textarea id="alamat" name="alamat" rows="3"
+                        placeholder="Contoh: Jl. Ryacudu, Lampung Selatan" required></textarea>
+            </div>
+
+            <div class="field field--full">
+              <label class="check">
+                <input type="checkbox" id="syarat" name="syarat" value="setuju" required>
+                <span>Saya menyatakan data yang diisi sudah benar dan dapat dipertanggungjawabkan.</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="form-actions">
+            <p class="form-hint">Data akan dikirim lewat URL &mdash; periksa kembali sebelum melanjutkan.</p>
+            <button class="btn btn--primary" type="submit">
+              Kirim &amp; Lihat Detail
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </button>
+          </div>
+        </form>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>Informatika ITERA &copy; 2025</p>
+      <p class="footer-meta">Tugas Individu 3 &middot; Pengembangan Aplikasi Web</p>
+    </div>
+  </footer>
+</body>
+</html>
