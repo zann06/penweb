@@ -21,6 +21,12 @@ task_3/
 ├── detail.html         # Halaman detail / ringkasan pendaftar
 ├── assets/
 │   └── style.css       # Seluruh desain (layout, box, tabel, form)
+├── screenshots/
+│   ├── pendaftaran.png
+│   ├── detail.png
+│   ├── pendaftaran-mobile.png
+│   └── mobile-preview.png
+├── RA-Farid Rizky Fauzan-124140210-Tugas3-Pemweb.pdf
 └── README.md
 ```
 
@@ -57,3 +63,22 @@ Jika dibuka tanpa parameter, halaman menampilkan data dummy.
 > Catatan: JavaScript pada `detail.html` hanya dipakai untuk **menampilkan**
 > query string ke tabel. Tidak ada data yang dikirim, disimpan, atau diproses
 > lebih lanjut.
+
+## Dokumentasi & Tangkapan Layar
+
+Laporan lengkap: [`RA-Farid Rizky Fauzan-124140210-Tugas3-Pemweb.pdf`](RA-Farid%20Rizky%20Fauzan-124140210-Tugas3-Pemweb.pdf)
+
+| Halaman pendaftaran | Halaman detail |
+|---|---|
+| ![Pendaftaran](screenshots/pendaftaran.png) | ![Detail](screenshots/detail.png) |
+
+## Validasi
+
+```bash
+npx html-validate task_3/index.html task_3/detail.html
+# 0 error, 0 warning
+```
+
+## Demo
+
+<https://zann06.github.io/penweb/task_3/index.html>
