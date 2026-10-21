@@ -45,10 +45,10 @@
 
       <div class="result-body">
         <div class="avatar-row">
-          <span class="avatar" id="avatar">AR</span>
+          <span class="avatar" id="avatar">SA</span>
           <div>
-            <p class="avatar-row__name" id="nama-value">Aulia Rahma</p>
-            <p class="avatar-row__meta" id="meta-value">NIM 124140210 &middot; Teknik Informatika</p>
+            <p class="avatar-row__name" id="nama-value">Syahid Amanullah</p>
+            <p class="avatar-row__meta" id="meta-value">NIM 124140174 &middot; Teknik Informatika</p>
           </div>
         </div>
 
@@ -58,15 +58,15 @@
             <tbody>
               <tr>
                 <th scope="row">Nama Lengkap</th>
-                <td id="t-nama">Aulia Rahma</td>
+                <td id="t-nama">Syahid Amanullah</td>
               </tr>
               <tr>
                 <th scope="row">NIM</th>
-                <td id="t-nim">124140210</td>
+                <td id="t-nim">124140174</td>
               </tr>
               <tr>
                 <th scope="row">Email</th>
-                <td id="t-email">aulia.rahma@student.itera.ac.id</td>
+                <td id="t-email">syahid.amanullah@student.itera.ac.id</td>
               </tr>
               <tr>
                 <th scope="row">Nomor WhatsApp</th>
@@ -78,11 +78,11 @@
               </tr>
               <tr>
                 <th scope="row">Angkatan</th>
-                <td id="t-angkatan">2025</td>
+                <td id="t-angkatan">2024</td>
               </tr>
               <tr>
                 <th scope="row">Jenis Kelamin</th>
-                <td id="t-gender">Perempuan</td>
+                <td id="t-gender">Laki-laki</td>
               </tr>
               <tr>
                 <th scope="row">Alamat Domisili</th>
@@ -123,13 +123,13 @@
 
   <script>
     const dummy = {
-      nama: "Aulia Rahma",
-      nim: "124140210",
-      email: "aulia.rahma@student.itera.ac.id",
+      nama: "Syahid Amanullah",
+      nim: "124140174",
+      email: "syahid.amanullah@student.itera.ac.id",
       telepon: "0812-3456-7890",
       prodi: "Teknik Informatika",
-      angkatan: "2025",
-      gender: "Perempuan",
+      angkatan: "2024",
+      gender: "Laki-laki",
       alamat: "Jl. Ryacudu, Lampung Selatan"
     };
 
@@ -155,7 +155,7 @@
     document.getElementById("nama-value").textContent = data.nama;
     document.getElementById("meta-value").textContent =
       "NIM " + data.nim + " \u00b7 " + data.prodi;
-    document.getElementById("avatar").textContent = initials || "AR";
+    document.getElementById("avatar").textContent = initials || "SA";
 
     const badge = document.getElementById("source-badge");
     if (hasQuery) {

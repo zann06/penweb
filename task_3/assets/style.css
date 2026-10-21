@@ -1,19 +1,18 @@
 :root {
-  --ink: #080c18;
-  --ink-soft: #0e1425;
-  --surface: rgba(255, 255, 255, 0.035);
-  --surface-strong: rgba(255, 255, 255, 0.06);
-  --border: rgba(255, 255, 255, 0.09);
-  --border-strong: rgba(255, 255, 255, 0.18);
-  --text: #ece9e2;
-  --muted: #98a1b8;
-  --gold: #d7b46a;
-  --gold-soft: #f1dba8;
-  --gold-deep: #9a7a37;
-  --danger: #e07a6a;
+  --ink: #f8f3e9;
+  --ink-soft: #fffdf8;
+  --surface: rgba(255, 255, 255, 0.66);
+  --surface-strong: rgba(255, 255, 255, 0.9);
+  --border: rgba(93, 72, 35, 0.14);
+  --border-strong: rgba(93, 72, 35, 0.3);
+  --text: #2c2a23;
+  --muted: #7c7566;
+  --gold: #ab8642;
+  --gold-soft: #8d6a2a;
+  --gold-deep: #6f5321;
   --radius: 20px;
   --radius-sm: 12px;
-  --shadow: 0 30px 80px -40px rgba(0, 0, 0, 0.9);
+  --shadow: 0 30px 70px -45px rgba(83, 62, 28, 0.45);
   --font-display: "Cormorant Garamond", Georgia, serif;
   --font-body: "Inter", "Segoe UI", system-ui, sans-serif;
 }
@@ -32,9 +31,9 @@ body {
   margin: 0;
   min-height: 100vh;
   background:
-    radial-gradient(1200px 700px at 82% -10%, rgba(215, 180, 106, 0.14), transparent 60%),
-    radial-gradient(900px 600px at 0% 100%, rgba(72, 96, 168, 0.18), transparent 65%),
-    var(--ink);
+    radial-gradient(1100px 700px at 85% -10%, rgba(201, 166, 104, 0.3), transparent 62%),
+    radial-gradient(900px 600px at -5% 105%, rgba(224, 200, 152, 0.4), transparent 68%),
+    linear-gradient(180deg, #fbf7ee, #f5eee0);
   color: var(--text);
   font-family: var(--font-body);
   font-size: 15px;
@@ -48,8 +47,8 @@ body::before {
   position: fixed;
   inset: 0;
   background-image:
-    linear-gradient(rgba(255, 255, 255, 0.022) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.022) 1px, transparent 1px);
+    linear-gradient(rgba(120, 95, 45, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(120, 95, 45, 0.06) 1px, transparent 1px);
   background-size: 64px 64px;
   mask-image: radial-gradient(circle at 50% 20%, black, transparent 75%);
   pointer-events: none;
@@ -62,7 +61,7 @@ body::before {
   height: 520px;
   border-radius: 50%;
   filter: blur(120px);
-  opacity: 0.28;
+  opacity: 0.45;
   pointer-events: none;
   z-index: 0;
 }
@@ -70,13 +69,13 @@ body::before {
 .glow--one {
   top: -220px;
   right: -140px;
-  background: #b8924a;
+  background: #e8d3a4;
 }
 
 .glow--two {
   bottom: -260px;
   left: -180px;
-  background: #2f4a86;
+  background: #f2e5c9;
 }
 
 .container {
@@ -92,7 +91,8 @@ body::before {
   position: relative;
   z-index: 2;
   border-bottom: 1px solid var(--border);
-  backdrop-filter: blur(10px);
+  background: rgba(250, 246, 237, 0.72);
+  backdrop-filter: blur(12px);
 }
 
 .header-inner {
@@ -118,8 +118,8 @@ body::before {
   height: 42px;
   border: 1px solid var(--gold-deep);
   border-radius: 11px;
-  background: linear-gradient(145deg, rgba(215, 180, 106, 0.22), rgba(215, 180, 106, 0.04));
-  color: var(--gold-soft);
+  background: linear-gradient(145deg, rgba(169, 131, 63, 0.2), rgba(169, 131, 63, 0.03));
+  color: var(--gold-deep);
   font-family: var(--font-display);
   font-size: 19px;
   font-weight: 600;
@@ -165,13 +165,13 @@ body::before {
 
 .nav__link:hover {
   color: var(--text);
-  background: var(--surface);
+  background: rgba(169, 131, 63, 0.08);
 }
 
 .nav__link.is-active {
-  color: var(--gold-soft);
-  background: rgba(215, 180, 106, 0.1);
-  box-shadow: inset 0 0 0 1px rgba(215, 180, 106, 0.25);
+  color: var(--gold-deep);
+  background: rgba(169, 131, 63, 0.12);
+  box-shadow: inset 0 0 0 1px rgba(169, 131, 63, 0.3);
 }
 
 /* ---------- Hero ---------- */
@@ -220,7 +220,7 @@ body::before {
 .mono {
   font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
   font-size: 0.9em;
-  color: var(--gold-soft);
+  color: var(--gold-deep);
 }
 
 /* ---------- Layout ---------- */
@@ -241,7 +241,7 @@ body::before {
   padding: 30px;
   border: 1px solid var(--border);
   border-radius: var(--radius);
-  background: linear-gradient(180deg, var(--surface), transparent 70%);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.22) 70%);
 }
 
 .info-panel__title {
@@ -273,7 +273,7 @@ body::before {
   height: 38px;
   border: 1px solid var(--border-strong);
   border-radius: 10px;
-  color: var(--gold);
+  color: var(--gold-deep);
   font-size: 11px;
   font-weight: 600;
   letter-spacing: 0.08em;
@@ -298,9 +298,9 @@ body::before {
   gap: 12px;
   margin-top: 30px;
   padding: 16px 18px;
-  border: 1px solid rgba(215, 180, 106, 0.22);
+  border: 1px solid rgba(169, 131, 63, 0.26);
   border-radius: var(--radius-sm);
-  background: rgba(215, 180, 106, 0.06);
+  background: rgba(169, 131, 63, 0.08);
 }
 
 .note__dot {
@@ -310,7 +310,7 @@ body::before {
   margin-top: 7px;
   border-radius: 50%;
   background: var(--gold);
-  box-shadow: 0 0 0 4px rgba(215, 180, 106, 0.14);
+  box-shadow: 0 0 0 4px rgba(169, 131, 63, 0.16);
 }
 
 .note p {
@@ -331,7 +331,7 @@ body::before {
   border: 1px solid var(--border);
   border-radius: var(--radius);
   background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.018));
+    linear-gradient(180deg, rgba(255, 255, 255, 0.94), rgba(255, 255, 255, 0.74));
   box-shadow: var(--shadow);
   backdrop-filter: blur(14px);
   overflow: hidden;
@@ -367,9 +367,9 @@ body::before {
 }
 
 .badge--ok {
-  border-color: rgba(215, 180, 106, 0.35);
-  color: var(--gold-soft);
-  background: rgba(215, 180, 106, 0.08);
+  border-color: rgba(169, 131, 63, 0.4);
+  color: var(--gold-deep);
+  background: rgba(169, 131, 63, 0.12);
 }
 
 /* ---------- Form ---------- */
@@ -422,7 +422,7 @@ fieldset.field {
   padding: 12px 14px;
   border: 1px solid var(--border);
   border-radius: var(--radius-sm);
-  background: rgba(6, 10, 20, 0.55);
+  background: rgba(255, 255, 255, 0.82);
   color: var(--text);
   font-family: inherit;
   font-size: 14px;
@@ -437,7 +437,7 @@ fieldset.field {
 
 .field input::placeholder,
 .field textarea::placeholder {
-  color: #566078;
+  color: #a89e8b;
 }
 
 .field input:hover,
@@ -451,13 +451,13 @@ fieldset.field {
 .field textarea:focus {
   outline: none;
   border-color: var(--gold);
-  background: rgba(6, 10, 20, 0.8);
-  box-shadow: 0 0 0 3px rgba(215, 180, 106, 0.16);
+  background: #ffffff;
+  box-shadow: 0 0 0 3px rgba(169, 131, 63, 0.18);
 }
 
 .field select {
   appearance: none;
-  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='none' stroke='%2398a1b8' stroke-width='1.4' d='M1 1.5 6 6.5l5-5'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='none' stroke='%238a7a5c' stroke-width='1.4' d='M1 1.5 6 6.5l5-5'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
   background-position: right 14px center;
   padding-right: 38px;
@@ -484,7 +484,7 @@ fieldset.field {
   padding: 12px 14px;
   border: 1px solid var(--border);
   border-radius: var(--radius-sm);
-  background: rgba(6, 10, 20, 0.45);
+  background: rgba(255, 255, 255, 0.6);
   color: var(--muted);
   font-size: 13.5px;
   font-weight: 400;
@@ -509,12 +509,12 @@ fieldset.field {
 
 .segmented__item:has(input:checked) {
   border-color: var(--gold);
-  color: var(--gold-soft);
-  background: rgba(215, 180, 106, 0.1);
+  color: var(--gold-deep);
+  background: rgba(169, 131, 63, 0.12);
 }
 
 .segmented__item:has(input:focus-visible) {
-  box-shadow: 0 0 0 3px rgba(215, 180, 106, 0.18);
+  box-shadow: 0 0 0 3px rgba(169, 131, 63, 0.2);
 }
 
 /* checkbox */
@@ -556,7 +556,7 @@ fieldset.field {
 .form-hint {
   margin: 0;
   max-width: 34ch;
-  color: #6d7790;
+  color: #9a917f;
   font-size: 11.5px;
   line-height: 1.55;
 }
@@ -588,14 +588,14 @@ fieldset.field {
 }
 
 .btn--primary {
-  background: linear-gradient(135deg, var(--gold-soft), var(--gold));
-  color: #1a1508;
-  box-shadow: 0 14px 34px -16px rgba(215, 180, 106, 0.75);
+  background: linear-gradient(135deg, #e0c485, #bd9449);
+  color: #241b0a;
+  box-shadow: 0 14px 30px -16px rgba(140, 105, 45, 0.75);
 }
 
 .btn--primary:hover {
   transform: translateY(-1px);
-  box-shadow: 0 18px 40px -14px rgba(215, 180, 106, 0.85);
+  box-shadow: 0 18px 36px -14px rgba(140, 105, 45, 0.85);
 }
 
 .btn--ghost {
@@ -606,8 +606,8 @@ fieldset.field {
 
 .btn--ghost:hover {
   border-color: var(--gold);
-  color: var(--gold-soft);
-  background: rgba(215, 180, 106, 0.06);
+  color: var(--gold-deep);
+  background: rgba(169, 131, 63, 0.07);
 }
 
 /* ---------- Detail / result ---------- */
@@ -633,10 +633,10 @@ fieldset.field {
   place-items: center;
   width: 62px;
   height: 62px;
-  border: 1px solid rgba(215, 180, 106, 0.4);
+  border: 1px solid rgba(169, 131, 63, 0.45);
   border-radius: 50%;
-  background: linear-gradient(150deg, rgba(215, 180, 106, 0.24), rgba(215, 180, 106, 0.05));
-  color: var(--gold-soft);
+  background: linear-gradient(150deg, rgba(169, 131, 63, 0.22), rgba(169, 131, 63, 0.05));
+  color: var(--gold-deep);
   font-family: var(--font-display);
   font-size: 24px;
   font-weight: 600;
@@ -702,7 +702,7 @@ fieldset.field {
 }
 
 .data-table tbody tr:hover {
-  background: rgba(255, 255, 255, 0.022);
+  background: rgba(169, 131, 63, 0.05);
 }
 
 .query-block {
@@ -710,7 +710,7 @@ fieldset.field {
   padding: 18px 20px;
   border: 1px solid var(--border);
   border-radius: var(--radius-sm);
-  background: rgba(6, 10, 20, 0.55);
+  background: rgba(255, 255, 255, 0.78);
 }
 
 .query-block__head {
@@ -731,13 +731,13 @@ fieldset.field {
 }
 
 .query-block__head .mono {
-  color: #6d7790;
+  color: #9a917f;
   font-size: 10.5px;
 }
 
 .query {
   display: block;
-  color: var(--gold-soft);
+  color: #7a5a1f;
   font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
   font-size: 12.5px;
   line-height: 1.7;
@@ -752,7 +752,7 @@ fieldset.field {
   gap: 16px;
   padding: 24px 30px;
   border-top: 1px solid var(--border);
-  background: rgba(0, 0, 0, 0.16);
+  background: rgba(255, 255, 255, 0.4);
 }
 
 /* ---------- Footer ---------- */
@@ -761,7 +761,7 @@ fieldset.field {
   position: relative;
   z-index: 1;
   border-top: 1px solid var(--border);
-  background: rgba(0, 0, 0, 0.2);
+  background: rgba(255, 255, 255, 0.42);
 }
 
 .footer-inner {
@@ -781,7 +781,7 @@ fieldset.field {
 }
 
 .footer-meta {
-  color: #6d7790 !important;
+  color: #9a917f !important;
 }
 
 /* ---------- Utilities ---------- */
